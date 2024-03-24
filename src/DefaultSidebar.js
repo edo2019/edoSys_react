@@ -17,6 +17,8 @@ import {
   PowerIcon,
 } from "@heroicons/react/24/solid";
 
+//sidebar
+
 export function DefaultSidebar() {
   return (
     <Card className="h-[calc(100vh-2rem)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5">
@@ -36,13 +38,13 @@ export function DefaultSidebar() {
           <ListItemPrefix>
             <ShoppingBagIcon className="h-5 w-5" />
           </ListItemPrefix>
-          E-Commerce
+          Our Product
         </ListItem>
         <ListItem className="px-4 py-2">
           <ListItemPrefix>
             <InboxIcon className="h-5 w-5" />
           </ListItemPrefix>
-          Inbox
+          Events
           <ListItemSuffix>
             <Chip
               value="14"

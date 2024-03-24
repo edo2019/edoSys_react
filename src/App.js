@@ -1,19 +1,19 @@
 import React from "react";
 import DefaultSidebar from "./DefaultSidebar";
-
-//import logo from './logo.svg';
-//import './App.css';
+import NavbarSimple from "./NavbarSimple";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1></h1>
-      </header>
-      <main>
-        <DefaultSidebar />
+   <div className="flex flex-col h-screen">
+     <NavbarSimple />
+    <div className="flex flex-1">
+      <DefaultSidebar />
+      <main className="flex-grow p-4">
+        {/* Your content here */}
+        <h1>Welcome to My App</h1>
       </main>
     </div>
+     </div>
   );
 }
 
