@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 
 const SimplePage = () => {
-  // your code
+  // Define state using useState hook
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Event handler function to toggle menu
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="container mx-auto p-4">
-      {" "}
       {/* Basic layout with padding */}
       <nav className="navbar bg-gray-800 text-white py-4">
-        {" "}
         {/* Gray background, white text */}
         <div className="navbar-brand flex items-center">
           <h1 className="font-bold">Welcome to My Simple Page</h1>
@@ -20,9 +25,7 @@ const SimplePage = () => {
         </button>
       </nav>
       <div
-        className={`sidebar bg-gray-200 w-64 ${
-          isMenuOpen ? "block" : "hidden"
-        }`}
+        className={`sidebar bg-gray-200 w-64 ${isMenuOpen ? "block" : "hidden"}`}
       >
         {/* Expand sidebar on open */}
         <ul className="list-reset">
