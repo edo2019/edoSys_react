@@ -1,7 +1,7 @@
 import React from "react";
 import {
   Navbar,
-  Collapse,
+  // Collapse,
   Typography,
   IconButton,
 } from "@material-tailwind/react";
@@ -20,7 +20,7 @@ function NavList() {
           href="#"
           className="flex items-center hover:text-blue-500 transition-colors"
         >
-          Pages
+          Our Customers
         </a>
       </Typography>
       <Typography
@@ -33,7 +33,7 @@ function NavList() {
           href="#"
           className="flex items-center hover:text-blue-500 transition-colors"
         >
-          Account
+          Contacts
         </a>
       </Typography>
       <Typography
@@ -46,7 +46,7 @@ function NavList() {
           href="#"
           className="flex items-center hover:text-blue-500 transition-colors"
         >
-          Blocks
+          About us
         </a>
       </Typography>
       <Typography
@@ -59,7 +59,7 @@ function NavList() {
           href="#"
           className="flex items-center hover:text-blue-500 transition-colors"
         >
-          Docs
+          Location
         </a>
       </Typography>
     </ul>
@@ -89,9 +89,9 @@ export function NavbarSimple() {
           variant="h6"
           className="mr-4 cursor-pointer py-1.5 text-black"
         >
-          Material Tailwind
+          BabyHuu Store Management System
         </Typography>
-        <div className="hidden lg:block">
+        <div className="">
           <NavList />
         </div>
         <IconButton
@@ -107,9 +107,6 @@ export function NavbarSimple() {
           )}
         </IconButton>
       </div>
-      <Collapse open={openNav}>
-        <NavList />
-      </Collapse>
     </Navbar>
   );
 }

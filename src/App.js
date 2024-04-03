@@ -1,19 +1,25 @@
 import React from "react";
-import DefaultSidebar from "./DefaultSidebar";
-import NavbarSimple from "./NavbarSimple";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./Components/Login";
+import Layout from "./Components/Layout";
+//import Dashboard from "./Dashboard"; // Import the Dashboard component
 
 function App() {
   return (
-   <div className="flex flex-col h-screen">
-     <NavbarSimple />
-    <div className="flex flex-1">
-      <DefaultSidebar />
-      <main className="flex-grow p-4">
-        {/* Your content here */}
-        <h1>Welcome to My App</h1>
-      </main>
-    </div>
-     </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} /> {/* Login page route */}
+        <Route
+          path="/Layout"
+          element={
+            
+              <Layout /> 
+          }
+        />{" "}
+        {/* sidebar route */}
+        {/* Add more routes for other pages here */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 
